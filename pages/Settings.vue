@@ -72,11 +72,11 @@ function changeAvatar(e: InputFileEvent) {
         </div>
         <div class="mb-3 flex gap-5 items-center">
             <label>Old password: </label>
-            <Input v-model="formData.oldPassword" />
+            <Input type="password" v-model="formData.oldPassword" />
         </div>
         <div class="mb-3 flex gap-5 items-center">
             <label>New password: </label>
-            <Input v-model="formData.password" />
+            <Input type="password" v-model="formData.password" />
         </div>
         <p class="mb-3">
             In order to change your email you need to write your old password
