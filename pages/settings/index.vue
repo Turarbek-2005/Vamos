@@ -37,13 +37,13 @@ const formData = reactive({
 
 const { mutate: updateComments } = useMutation({
     mutationKey: ['update comments avatar'],
-    mutationFn: async (fileUrl: String) => {
+    mutationFn: async ({ Url, name }: { Url: String; name: String }) => {
         if (comments) {
             for (const item of comments) {
                 const formattedData = {
                     text: item.text,
-                    name: item.name,
-                    avatar: fileUrl,
+                    name: name ? name : item.name,
+                    avatar: Url ? Url : item.avatar,
                 };
 
                 await DB.updateDocument(
@@ -66,6 +66,7 @@ const { mutate: updateComments } = useMutation({
 const { mutate: updatePublications } = useMutation({
     mutationKey: ['update publications avatar'],
     mutationFn: async ({ Url, name }: { Url: String; name: String }) => {
+        console.log(name);
         if (publications) {
             for (const item of publications) {
                 const formattedData = {
@@ -93,6 +94,7 @@ const { mutate: updatePublications } = useMutation({
 function updateInfo(formData: any) {
     if (formData.name) {
         account.updateName(formData.name);
+        updateComments({ Url: '', name: formData.name });
         updatePublications({ Url: '', name: formData.name });
         console.log('Имя успешно обновлено.');
     }
@@ -123,7 +125,7 @@ const { mutate: uploadImage } = useMutation({
         account.updatePrefs({ avatarUrl: fileUrl });
         authStore.user.prefs.avatarUrl = fileUrl;
         updatePublications({ Url: fileUrl, name: '' });
-        updateComments(fileUrl);
+        updateComments({ Url: fileUrl, name: '' });
         return { uploadedFile, fileUrl };
     },
     onSuccess(data) {
