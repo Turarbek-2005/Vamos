@@ -106,6 +106,9 @@ async function create() {
             :onchange="addPhoto"
             class="w-72 mb-5 dark:bg-white dark:text-black"
         />
+        <p class="dark:text-white mb-5 text-xl">
+            Files must be selected one at a time
+        </p>
         <Button @click="create">Create</Button>
     </div>
 </template>

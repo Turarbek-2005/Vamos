@@ -9,7 +9,7 @@ const authStore = useAuthStore();
 const user = authStore.user;
 </script>
 <template>
-    <div class="flex justify-between mt-5 mb-5">
+    <div class="flex justify-between my-5 lg:ml-14">
         <div class="flex flex-col items-center w-96 mx-auto">
             <div v-for="item in data" :key="item.id" class="mb-5">
                 <div class="flex items-center mb-3">
@@ -155,7 +155,7 @@ const user = authStore.user;
                 </div>
             </div>
         </div>
-        <div class="w-72 h-screen relative">
+        <div class="w-72 h-screen relative info">
             <div class="w-full fixed">
                 <NuxtLink to="/Profile" class="flex items-center">
                     <NuxtImg
@@ -173,5 +173,11 @@ const user = authStore.user;
 <style scoped>
 .img {
     height: 30rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .info {
+        display: none;
+    }
 }
 </style>
