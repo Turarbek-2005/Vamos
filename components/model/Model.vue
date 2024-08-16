@@ -4,7 +4,7 @@ import { useDialogSlideStore } from "~/store/dialog-slide.store";
 const store = useDialogSlideStore();
 </script>
 <template>
-  <DialogContent class="dark:text-white overflow-scroll">
+  <DialogContent class="dark:text-white overflow-y-scroll">
     <div class="flex items-center mb-3">
       <NuxtImg
         :src="store.card?.avatar"

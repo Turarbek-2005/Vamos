@@ -28,8 +28,10 @@ const card = data as unknown as IPublication;
       >
         <NuxtImg :src="comment.avatar" class="rounded-full mr-3 h-12 w-12" />
         <div class="border-border bg-black/20 rounded w-full">
-          <div class="mb-2 text-xl">
-            {{ comment.name }}
+          <div
+            class="mb-2 text-base sm:text-xl flex sm:items-center flex-col sm:flex-row"
+          >
+            <label class="mr-1">{{ comment.name }}</label>
             <!-- {{ dayjs(comment.$createdAt).format('') }} -->
             <label class="text-zinc-400 text-sm">{{
               dayjs(comment.$createdAt).format("DD MMMM YYYY HH:mm")
