@@ -25,4 +25,9 @@ export const MENU_DATA: IMenuItem[] = [
     icon: "humbleicons:user",
     url: "/profile",
   },
+  {
+    name: "Chatbot",
+    icon: "ion:logo-web-component",
+    url: "/chatbot",
+  },
 ];

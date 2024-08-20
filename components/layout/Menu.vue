@@ -10,7 +10,7 @@ import { MENU_DATA } from "./menu.data";
       :key="item.name"
       :to="item.url"
     >
-      <Icon :name="item.icon" class="lg:mr-5" size="30" />
+      <Icon :name="item.icon" class="lg:mr-5" size="24" />
       <span class="hidden lg:block">{{ item.name }}</span>
     </NuxtLink>
   </div>
