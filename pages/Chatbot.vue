@@ -36,7 +36,7 @@ async function run() {
     <p class="dark:text-white" v-if="isLoading">Loading...</p>
     <div v-else>
       <p class="dark:text-white" v-if="!isLoading && !receive">
-        Привет! Чем могу быть полезен?
+        Hello! How can I help you?
       </p>
       <p class="dark:text-white" v-else>{{ receive }}</p>
     </div>
