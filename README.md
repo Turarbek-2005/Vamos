@@ -1,48 +1,75 @@
-# ⚡ Node.js Starter Function
+# Nuxt 3 Minimal Starter
 
-A simple starter function. Edit `src/main.js` to get started and create something awesome! 🚀
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## 🧰 Usage
+## Setup
 
-### GET /
+Make sure to install the dependencies:
 
-- Returns a "Hello, World!" message.
+```bash
+# npm
+npm install
 
-**Response**
+# pnpm
+pnpm install
 
-Sample `200` Response:
+# yarn
+yarn install
 
-```text
-Hello, World!
+# bun
+bun install
 ```
 
-### POST, PUT, PATCH, DELETE /
+## Development Server
 
-- Returns a "Learn More" JSON response.
+Start the development server on `http://localhost:3000`:
 
-**Response**
+```bash
+# npm
+npm run dev
 
-Sample `200` Response:
+# pnpm
+pnpm run dev
 
-```json
-{
-  "motto": "Build like a team of hundreds_",
-  "learn": "https://appwrite.io/docs",
-  "connect": "https://appwrite.io/discord",
-  "getInspired": "https://builtwith.appwrite.io"
-}
+# yarn
+yarn dev
+
+# bun
+bun run dev
 ```
 
-## ⚙️ Configuration
+## Production
 
-| Setting           | Value         |
-| ----------------- | ------------- |
-| Runtime           | Node (18.0)   |
-| Entrypoint        | `src/main.js` |
-| Build Commands    | `npm install` |
-| Permissions       | `any`         |
-| Timeout (Seconds) | 15            |
+Build the application for production:
 
-## 🔒 Environment Variables
+```bash
+# npm
+npm run build
 
-No environment variables required.
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm run preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

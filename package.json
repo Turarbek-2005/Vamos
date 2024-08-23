@@ -1,16 +1,43 @@
 {
-  "name": "starter-template",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/main.js",
+  "name": "nuxt-app",
+  "private": true,
   "type": "module",
   "scripts": {
-    "format": "prettier --write ."
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "node-appwrite": "^12.0.1"
+    "@google/generative-ai": "^0.17.0",
+    "@nuxt/image": "^1.7.0",
+    "@pinia/nuxt": "^0.5.1",
+    "@tanstack/vue-query": "^5.45.0",
+    "@vueuse/core": "^10.11.0",
+    "appwrite": "^15.0.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.11",
+    "embla-carousel": "^8.1.5",
+    "embla-carousel-vue": "^8.1.5",
+    "lucide-vue-next": "^0.394.0",
+    "nuxt": "^3.11.2",
+    "pinia": "^2.1.7",
+    "radix-vue": "^1.8.3",
+    "shadcn-nuxt": "^0.10.4",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2",
+    "vue-uuid": "^3.0.0",
+    "vue3-toastify": "^0.2.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "prettier": "^3.2.5"
+    "@nuxtjs/color-mode": "^3.4.1",
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "nuxt-icon": "^0.6.10",
+    "typescript": "^5.4.5"
   }
 }
